@@ -11,7 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class register extends AppCompatActivity {
-    TextView dtlpesanan, dtlnama, dtlalamat, dtlkodepos, dtlnotel;
+    TextView dtlpesanan, dtlnama, dtlalamat, dtlkodepos, dtlnotel; //deklarasi variabel
     Button btndtlbatal, btndtlpesan;
     EditText dtlnamaa, dtlalamatt, dtlkodeposs, dtlnotell;
 
@@ -35,7 +35,7 @@ public class register extends AppCompatActivity {
         btndtlbatal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), HomeActivity.class);
+                Intent i = new Intent(getApplicationContext(), HomeActivity.class); //berpindah layout
                 startActivity(i);
             }
         });
@@ -43,11 +43,11 @@ public class register extends AppCompatActivity {
         btndtlpesan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (dtlnamaa.getText().toString().isEmpty() ||
+                if (dtlnamaa.getText().toString().isEmpty() || //input yang tidak boleh kosong
                         dtlalamatt.getText().toString().isEmpty() ||
                         dtlkodeposs.getText().toString().isEmpty() ||
                         dtlnotell.getText().toString().isEmpty()) {
-                    dtlnamaa.setError("Masukkan Nama");
+                    dtlnamaa.setError("Masukkan Nama"); //memberi set eror bertulisan masukan nama
                     dtlalamatt.setError("Masukkan Alamat");
                     dtlkodeposs.setError("Masukkan Kode Pos");
                     dtlnotell.setError("Masukkan Nomor Telepon");

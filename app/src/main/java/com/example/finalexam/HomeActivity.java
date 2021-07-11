@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class HomeActivity extends AppCompatActivity {
-    Button btnsimental, btnbrangus, btnlimousin, btnbrahman;
+    Button btnsimental, btnbrangus, btnlimousin, btnbrahman; //deklarasi variabel
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,13 +17,13 @@ public class HomeActivity extends AppCompatActivity {
 
         btnsimental = findViewById(R.id.idsimental);
         btnbrangus = findViewById(R.id.idbrangus);
-        btnlimousin = findViewById(R.id.idlimousin);
+        btnlimousin = findViewById(R.id.idlimousin); //menghubungkan variabel pada button layout
         btnbrahman = findViewById(R.id.idbrahman);
 
         btnsimental.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), com.example.finalexam.ActivityBrahman.class);
+                Intent i = new Intent(getApplicationContext(), com.example.finalexam.ActivityBrahman.class); //berpindah layout
                 startActivity(i);
             }
         });
